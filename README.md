@@ -4,7 +4,7 @@ Type: Article
 
 # Zeus
 
-![Screenshot from 2025-07-21 11-02-52.png](DownunderCTF%20zeus%20write-up%20237082343b3d809d9ee0cc78d6974cb9/Screenshot_from_2025-07-21_11-02-52.png)
+![zeus-file.png](zeus-file.png)
 
 Well, this is zeus challenge from DownunderCTF, from the first look the attachment look like a binary executable file, but we need to check using `file` commend after download.
 
