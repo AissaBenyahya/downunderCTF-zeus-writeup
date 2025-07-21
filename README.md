@@ -4,11 +4,11 @@ Type: Article
 
 # Zeus
 
-![zeus-file.png](zeus-file.png)
+![zeus-desc.png](zeus-desc.png)
 
 Well, this is zeus challenge from DownunderCTF, from the first look the attachment look like a binary executable file, but we need to check using `file` commend after download.
 
-![Screenshot from 2025-07-21 11-05-22.png](DownunderCTF%20zeus%20write-up%20237082343b3d809d9ee0cc78d6974cb9/Screenshot_from_2025-07-21_11-05-22.png)
+![zeus-file.png](zeus-file.png)
 
 yeah as i expected it’s an ELF 64-bit binary, which means it’s a reverse engineering challenge and we need a tool to reverse engineer the ELF binary. An example of the tools we can use are as follow:
 
@@ -20,7 +20,7 @@ yeah as i expected it’s an ELF 64-bit binary, which means it’s a reverse eng
 
 those are some options, in my case the most straight forward one is Ghidra so i installed ghidra it’s free and open source i guess. After importing the binary to ghidra and analyse the `main` function we got the following
 
-![zeus.png](DownunderCTF%20zeus%20write-up%20237082343b3d809d9ee0cc78d6974cb9/zeus.png)
+![zeus.png](zeus.png)
 
 In the screenshot i already change the name of the message into `message` , initially it was a weird name. We will ignore the variables for now some of them are used for other purposes, we will focus on understanding first the program and what it does. 
 
@@ -51,6 +51,6 @@ Now that we got the actual `C` code we know we should pass `-invocation` and the
 ./zeus '-invocation' 'To Zeus Maimaktes, Zeus who comes when the north wind blows, we offer our praise, we make you welcome!'
 ```
 
-![Screenshot from 2025-07-21 11-32-21.png](DownunderCTF%20zeus%20write-up%20237082343b3d809d9ee0cc78d6974cb9/Screenshot_from_2025-07-21_11-32-21.png)
+![zeus-flag.png](zeus-flag.png)
 
 The content of the flag is horrible though!!
