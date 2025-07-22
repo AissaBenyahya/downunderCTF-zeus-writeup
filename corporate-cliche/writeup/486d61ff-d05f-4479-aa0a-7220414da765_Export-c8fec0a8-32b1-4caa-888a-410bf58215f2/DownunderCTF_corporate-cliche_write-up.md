@@ -189,7 +189,7 @@ top of                                                 bottom of stack
 stack 
 ```
 
-For now, just focus on the top of the stack and the bottom of the stack. Whenever we write to a variable, we are writing from the bottom of the stack toward the top of the stack. That is to say, since `buffer2` is `10 bytes` long if we write `15 bytes` to it we will overwrite the content of `buffer1` it’s `10 + 5.` 
+For now, just focus on the top of the stack and the bottom of the stack. Whenever we write to a variable, we are writing from the top of the stack toward the bottom of the stack. That is to say, since `buffer2` is `10 bytes` long if we write `15 bytes` to it we will overwrite the content of `buffer1` it’s `10 + 5.` 
 
 Hence, for our code, the stack will look like this:
 
@@ -197,7 +197,7 @@ Hence, for our code, the stack will look like this:
 bottom of                                             top of memory
 memory
 
-         username    password   sfp  ret 
+         password    username   sfp  ret 
 <------ [          ][        ][   ][   ]
 stack   ^                     ^
 grows   SP                    FP
